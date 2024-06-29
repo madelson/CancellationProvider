@@ -34,6 +34,7 @@
     <PackageProjectUrl>https://github.com/madelson/CancellationProvider</PackageProjectUrl>
     <RepositoryUrl>https://github.com/madelson/CancellationProvider</RepositoryUrl>
     <PackageReleaseNotes>See https://github.com/madelson/CancellationProvider#release-notes</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -51,5 +52,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
+
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
