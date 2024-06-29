@@ -1,0 +1,7 @@
+﻿#nullable enable
+Medallion.Threading.CancellationProvider
+Medallion.Threading.CancellationProvider.BeginCleanScope() -> System.IDisposable!
+Medallion.Threading.CancellationProvider.BeginScope(System.Threading.CancellationToken token, System.Threading.CancellationToken token2 = default(System.Threading.CancellationToken), bool clean = false) -> System.IDisposable!
+Medallion.Threading.CancellationProvider.CancellationProvider(System.Threading.CancellationToken token) -> void
+Medallion.Threading.CancellationProvider.Token.get -> System.Threading.CancellationToken
+static Medallion.Threading.CancellationProvider.Default.get -> Medallion.Threading.CancellationProvider!

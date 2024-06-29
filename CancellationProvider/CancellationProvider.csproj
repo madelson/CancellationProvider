@@ -5,6 +5,51 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>Latest</LangVersion>
+    <RootNamespace>Medallion.Threading</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Authors>Michael Adelson</Authors>
+    <Description>Abstraction for flowing CancellationToken via dependency injection</Description>
+    <Copyright>Copyright © 2024 Michael Adelson</Copyright>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\CancellationProvider.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>True</Optimize>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+    <!-- see https://github.com/dotnet/sdk/issues/2679 -->
+    <DebugType>embedded</DebugType>
+    <!-- see https://mitchelsellers.com/blog/article/net-5-deterministic-builds-source-linking -->
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>cancellation cancellationtoken dependency injection</PackageTags>
+    <PackageProjectUrl>https://github.com/madelson/CancellationProvider</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/madelson/CancellationProvider</RepositoryUrl>
+    <PackageReleaseNotes>See https://github.com/madelson/CancellationProvider#release-notes</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>False</Optimize>
+    <NoWarn>1591</NoWarn>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.11.0-beta1.24225.1" Condition="'$(Configuration)' == 'Release'">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 </Project>
