@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancellationProvider.Tests", "CancellationProvider.Tests\CancellationProvider.Tests.csproj", "{ADC389B1-6228-47F2-877A-31C89A9C69E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{BC69C2AD-2AF6-45BE-9314-45BBB64FA934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC69C2AD-2AF6-45BE-9314-45BBB64FA934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC69C2AD-2AF6-45BE-9314-45BBB64FA934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC389B1-6228-47F2-877A-31C89A9C69E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC389B1-6228-47F2-877A-31C89A9C69E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC389B1-6228-47F2-877A-31C89A9C69E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC389B1-6228-47F2-877A-31C89A9C69E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
